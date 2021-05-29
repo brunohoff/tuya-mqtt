@@ -1,5 +1,7 @@
 # tuya-mqtt
 
+#Project forked for upgrading tuyapi libs
+
 # !!!! Important Note !!!!
 This project is currently in maintainance mode.  No further enhancements to this project are planned and will not be planned for the future unless someone out there is interested in becoming the new maintainer.  Please do not open issues to request new features, new device support, etc, as they will likely be closed with no comment.  I will try to support existing functionality, but even this will likely be on a very limited basis.  If you are interested in maintaining this project, please post [here](https://github.com/rospogrigio/localtuya/issues/194).
 

@@ -68,6 +68,18 @@ class TuyaDevice {
             }
         })
 
+        // Listen for device dp refresh and call update DPS function if valid
+        this.device.on('dp-refresh', (data) => {
+            if (typeof data === 'object') {
+                console.log('Received JSON data from device '+this.options.id+' ->', JSON.stringify(data.dps))
+                this.updateState(data)
+            } else {
+                if (data !== 'json obj data unvalid') {
+                    console.log('Received string data from device '+this.options.id+' ->', data.replace(/[^a-zA-Z0-9 ]/g, ''))
+                }
+            }
+        })        
+
         // Attempt to find/connect to device and start heartbeat monitor
         this.connectDevice()
         this.monitorHeartbeat()
